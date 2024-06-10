@@ -1,3 +1,4 @@
+/* General Styles */
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
@@ -14,6 +15,7 @@ header {
     position: fixed;
     width: 100%;
     z-index: 1000;
+    transition: background-color 0.3s;
 }
 
 .container {
@@ -27,6 +29,7 @@ header {
     float: left;
     font-size: 1.5rem;
     font-weight: 700;
+    transition: color 0.3s;
 }
 
 nav {
@@ -59,23 +62,28 @@ nav ul li a:hover {
 }
 
 #hero {
-    background: url('hero.jpg') no-repeat center center/cover;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.1)), url('hero.jpg') no-repeat center center/cover;
     height: 100vh;
     color: #fff;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
+    transition: background 0.3s;
 }
 
 .section {
     padding: 4rem 0;
     background-color: #fff;
     margin-top: 70px; /* offset for fixed header */
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s, transform 0.6s;
 }
 
-.section:nth-child(even) {
-    background-color: #f9f9f9;
+.section.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .skills-list {
@@ -91,6 +99,11 @@ nav ul li a:hover {
     padding: 0.5rem 1rem;
     margin: 0.5rem;
     border-radius: 3px;
+    transition: background-color 0.3s;
+}
+
+.skills-list li:hover {
+    background-color: #357ae8;
 }
 
 .projects-grid {
@@ -140,3 +153,23 @@ footer {
     margin-top: 2rem;
     box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
 }
+
+/* Animation Classes */
+.fade-in {
+    animation: fadeIn 0.6s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+html {
+    scroll-behavior: smooth;
+}
+
