@@ -3,14 +3,14 @@ body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f9f9f9;
-    color: #333;
+    background-color: #000;
+    color: #fff;
     transition: background-color 0.3s, color 0.3s;
 }
 
 header {
-    background-color: #fff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #000;
+    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
     padding: 1rem 0;
     position: fixed;
     width: 100%;
@@ -28,6 +28,7 @@ header {
 .logo {
     float: left;
     font-size: 1.5rem;
+    font-family: 'Roboto Slab', serif;
     font-weight: 700;
     transition: color 0.3s;
 }
@@ -49,15 +50,16 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #333;
+    color: #fff;
     text-decoration: none;
+    font-family: 'Roboto Condensed', sans-serif;
     font-weight: 500;
     padding: 0.5rem 1rem;
     transition: background-color 0.3s, color 0.3s;
 }
 
 nav ul li a:hover {
-    background-color: #f1f1f1;
+    background-color: #333;
     border-radius: 5px;
 }
 
@@ -82,18 +84,20 @@ nav ul li a:hover {
 #hero h2 {
     font-size: 2.5rem;
     margin-bottom: 1rem;
+    font-family: 'Roboto Slab', serif;
 }
 
 #hero p {
     font-size: 1.25rem;
     margin-bottom: 2rem;
+    font-family: 'Roboto Condensed', sans-serif;
 }
 
 #hero .btn {
     font-size: 1rem;
     padding: 0.75rem 1.5rem;
-    background-color: #333;
-    color: #fff;
+    background-color: #fff;
+    color: #000;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -101,13 +105,13 @@ nav ul li a:hover {
 }
 
 #hero .btn:hover {
-    background-color: #555;
+    background-color: #ddd;
     transform: translateY(-2px);
 }
 
 .section {
     padding: 4rem 0;
-    background-color: #fff;
+    background-color: #000;
     opacity: 0;
     transform: translateY(50px);
     transition: opacity 0.6s, transform 0.6s;
@@ -146,30 +150,31 @@ nav ul li a:hover {
 }
 
 .project-card {
-    background-color: #fff;
+    background-color: #111;
     padding: 1rem;
     border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .project-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
 }
 
 .contact-details p {
     font-size: 1.1rem;
     line-height: 1.6;
+    font-family: 'Roboto Condensed', sans-serif;
 }
 
 footer {
-    background-color: #fff;
-    color: #333;
+    background-color: #000;
+    color: #fff;
     text-align: center;
     padding: 1rem 0;
     margin-top: 2rem;
-    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 -2px 4px rgba(255, 255, 255, 0.1);
 }
 
 /* Animation Classes */
@@ -186,4 +191,7 @@ footer {
         opacity: 1;
         transform: translateY(0);
     }
+}
+html {
+    scroll-behavior: smooth;
 }
